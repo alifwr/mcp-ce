@@ -16,7 +16,7 @@ export const serverConfig = {
 export const mcpConfig = {
     clientName: 'Test',
     clientVersion: '1.0.0',
-    serverUrl: 'http://localhost:3000/mcp',
+    serverUrl: `http://localhost:${serverConfig.port}/mcp`,
     connectionType: 'httpStream' as const,
 };
 

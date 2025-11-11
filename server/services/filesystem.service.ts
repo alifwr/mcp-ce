@@ -59,7 +59,8 @@ class FileSystemService {
      */
     async readFile(filePath: string): Promise<string> {
         try {
-            const content = await fs.readFile(filePath, 'utf-8');
+            const fullPath = path.join(this.toolsDir, filePath);
+            const content = await fs.readFile(fullPath, 'utf-8');
             return content;
         } catch (error) {
             throw new Error(`Failed to read file ${filePath}: ${error}`);
