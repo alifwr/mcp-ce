@@ -16,7 +16,7 @@ export const serverConfig = {
 export const mcpConfig = {
     clientName: 'Test',
     clientVersion: '1.0.0',
-    serverUrl: `http://localhost:${serverConfig.port}/mcp`,
+    serverUrl: `http://localhost:3000/mcp`,
     connectionType: 'httpStream' as const,
 };
 
@@ -24,7 +24,8 @@ export const mcpConfig = {
  * File system configuration
  */
 export const fsConfig = {
-    toolsDir: path.resolve(__dirname, '../tools'),
+    toolsDir: path.resolve(__dirname, '../sandbox/tools'),
+    sandboxDir: path.resolve(__dirname, '../sandbox'),
 };
 
 /**

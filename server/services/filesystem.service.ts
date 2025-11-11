@@ -9,9 +9,11 @@ import type { FileDetails, FileStats } from '../types';
  */
 class FileSystemService {
     private toolsDir: string;
+    private sandboxDir: string;
 
     constructor() {
         this.toolsDir = fsConfig.toolsDir;
+        this.sandboxDir = fsConfig.sandboxDir;
     }
 
     /**
@@ -72,7 +74,8 @@ class FileSystemService {
      */
     async writeFile(filePath: string, content: string): Promise<void> {
         try {
-            await fs.writeFile(filePath, content, 'utf-8');
+            const fullPath = path.join(this.sandboxDir, filePath);
+            await fs.writeFile(fullPath, content, 'utf-8');
         } catch (error) {
             throw new Error(`Failed to write file ${filePath}: ${error}`);
         }

@@ -5,7 +5,7 @@ node_modules
 out
 dist
 *.tgz
-server/tools/*
+server/sandbox/*
 
 # code coverage
 coverage
