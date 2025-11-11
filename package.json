@@ -1,0 +1,18 @@
+{
+  "name": "mcp-ce",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.21.1",
+    "@types/express": "^5.0.5",
+    "express": "^5.1.0",
+    "mcp-client": "^1.13.1"
+  }
+}
